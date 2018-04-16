@@ -19,7 +19,7 @@
                             <a data-toggle="tab" href="#below">下架的视频列表</a>
                         </li>
                         <li>
-                            <a  href="#tuisong">已推送的数据</a>
+                            <a  href="{{ route('vodTui') }}">已推送的数据</a>
                         </li>
                     </ul>
                 </h3>
