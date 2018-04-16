@@ -161,7 +161,7 @@
 <script src="{{asset('back')}}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="{{asset('back')}}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="{{asset('back')}}/js/plugins/layer/layer.min.js"></script>
-
+<script src="{{asset('js')}}/jquery-3.3.1.js"></script>
 <!-- 自定义js -->
 <script src="{{asset('back')}}/js/hplus.js?v=4.1.0"></script>
 <script type="text/javascript" src="{{asset('back')}}/js/contabs.js"></script>
@@ -172,6 +172,38 @@
     $(document).ready(function(){
         var height = $(window).height();   // 浏览器的高度
         $("#page-wrapper").height(height)  // 浏览器的高度加在类名为box的DIV 上
+    })
+</script>
+
+{{--list推送多选全选--}}
+<script type="text/javascript">
+    $(function(){
+        $("#alls").click(function(){
+            $("input[type=checkbox]").each(function(){
+                this.checked = true;
+            });
+        })
+        $("#falseall").click(function(){
+            $("input[type=checkbox]").each(function(){
+                if(this.checked) {
+                    this.checked = false;
+                } else {
+                    this.checked = true;
+                }
+            });
+        });
+    });
+</script>
+<script>
+    $(function () {
+        $("#vodPrope").submit(function () {
+            if($("#seleId option:selected").val() == false){
+                alert('请选择至少一条推送的数据和子站');
+                return false;
+            }else{
+                return true
+            }
+        })
     })
 </script>
 
