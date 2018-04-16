@@ -132,7 +132,7 @@ class AdminController extends Controller
     {
         $id = $request['id']; //拿到id
         $son_id = $request['son_id'];//拿到子站id
-        dump($son_id);die;
+       
 
         if ($son_id !== false) {
             $son_data = SonStand::find($son_id);  //拿到子站数据获取url
